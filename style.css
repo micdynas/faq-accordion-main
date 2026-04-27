@@ -1,0 +1,72 @@
+body{
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background: url("assets/images/background-pattern-desktop.svg") no-repeat;
+    background-size: cover;
+    background-color: hsl(275, 100%, 97%);
+    font-family: "Work Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+.FAQ{
+position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 35vw;
+    min-height: auto;
+    z-index: 1;
+    border-radius: 15px;
+    background-color: hsl(0, 100%, 100%);
+    padding-bottom: 2rem;
+
+}
+.header-text{
+    font-size: 3rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-left: 1.8rem;
+    margin-top: 2.5rem;
+}
+.header-img{
+    width: 2rem;
+    height: 2rem;
+}
+.First-text{
+    font-size: 0.9rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 2rem;
+    margin-left: 1.8rem;
+    margin-right: 1.8rem;
+    cursor: pointer;
+}
+.button-img{
+    width: 1.5rem;
+    height: 1.5rem;
+
+}
+.paragraph-text{
+    font-size: 0.9rem;
+    font-weight: 400;
+    color: hsl(0, 0%, 60%);
+    margin-top: 0.5rem;
+    margin-left: 1.8rem;
+    margin-right: 1.8rem;
+    display: none;
+}
+.paragraph-text.show {
+    display: block;
+}
+button{
+    background: none;
+    border: none;
+    cursor: pointer;
+     transition: 0.4s;
+}
