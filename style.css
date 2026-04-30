@@ -11,30 +11,34 @@ body{
     font-style: normal;
 }
 .FAQ{
-position: absolute;
+    position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 35vw;
     min-height: auto;
     z-index: 1;
-    border-radius: 15px;
+    border-radius: 16px;
     background-color: hsl(0, 100%, 100%);
-    padding-bottom: 2rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    padding-bottom: 1.5rem;
 
 }
 .header-text{
-    font-size: 3rem;
+    font-size: clamp(1rem, 3vw, 3rem);
     font-weight: 700;
     display: flex;
     align-items: center;
     gap: 1rem;
     margin-left: 1.8rem;
     margin-top: 2.5rem;
+    margin-bottom: 0rem;
+
 }
 .header-img{
-    width: 2rem;
-    height: 2rem;
+     width: clamp(1rem, 3vw, 2rem);
+    height: clamp(1rem, 3vw, 2rem);
+
 }
 .First-text{
     font-size: 0.9rem;
@@ -46,15 +50,18 @@ position: absolute;
     margin-left: 1.8rem;
     margin-right: 1.8rem;
     cursor: pointer;
+    gap: 0.7rem;
 }
 .button-img{
-    width: 1.5rem;
-    height: 1.5rem;
-
+    width: clamp(1.5rem, 1.9vw, 1.7rem);
+    height: clamp(1.5rem, 1.9vw, 1.7rem);
+    flex-shrink: 0; 
 }
 .paragraph-text{
     font-size: 0.9rem;
     font-weight: 400;
+      padding-bottom: 1rem;
+    line-height: 1.5;
     color: hsl(0, 0%, 60%);
     margin-top: 0.5rem;
     margin-left: 1.8rem;
@@ -63,10 +70,35 @@ position: absolute;
 }
 .paragraph-text.show {
     display: block;
+     animation: slideDown 0.3s ease-out;
 }
-button{
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+button {
     background: none;
     border: none;
     cursor: pointer;
-     transition: 0.4s;
+    transition: transform 0.3s ease;
+    padding: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+button:hover {
+    transform: scale(1.1);
+}
+
+button.active {
+    transform: rotate(90deg); /* Subtle rotation effect when active */
 }
