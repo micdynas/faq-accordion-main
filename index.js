@@ -21,4 +21,5 @@ for (i = 0; i < buttons.length; i++) {
       img.src = "assets/images/icon-plus.svg";
     }
   });
+
 }
